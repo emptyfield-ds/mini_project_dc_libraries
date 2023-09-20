@@ -1,13 +1,13 @@
 ---
 title: "Mini-Project: DC Public Library Resource Usage"
-output:
-  html_document:
-    df_print: paged
+format:
+  html:
+    df-print: paged
 ---
 
-```{r setup, include=FALSE}
-# knit options
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+#| label: setup
+#| include: false
 options(styler.save_after_styling = TRUE)
 ```
 
@@ -81,7 +81,7 @@ Let's create a map of DC that includes information on computer session usage by 
 
 ```{r}
 # put your R code in this code chunk
-library_wards %>% 
+library_wards |> 
   ggplot(aes(fill = ______)) + 
   ______ + 
   ______(
